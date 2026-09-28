@@ -1,0 +1,192 @@
+{
+  "run_id": "20260916T210631005068Z",
+  "dataset": "GSE84133 original annotated human UMI-filtered counts",
+  "source_paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5228327/",
+  "metadata_audit": "results/metadata_audit/20260916T210320854209Z/audit.json",
+  "metadata_sha256": "85ff0640d5ef2c9cbb014b9bfb31536ee7d4d9197b47e06ab5e486b90e1730b1",
+  "script": "analysis/prepare_baron.py",
+  "script_sha256": "49dd4bbedc8bc02a00c11f6ac3b597aff50986146832366dab2bc4f46c762461",
+  "python": "3.12.14",
+  "genes_path": "data/processed/baron/20260916T210631005068Z/genes.json",
+  "genes_sha256": "3f7f5c45c5c6a1c582b4806468f35e2bf13205d3e3b3cfd8051dfb2c066fdb7d",
+  "records": [
+    {
+      "donor": "human1",
+      "accession": "GSM2230757",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230757/suppl/GSM2230757_human1_umifm_counts.csv.gz",
+      "deposited_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230757/suppl/GSM2230757_human1_umifm_counts.csv.gz",
+      "final_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230757/suppl/GSM2230757_human1_umifm_counts.csv.gz",
+      "retrieved_at_utc": "2026-09-16T21:06:41.573000+00:00",
+      "raw_path": "data/raw/GSE84133/20260916T210631005068Z/GSM2230757_human1_umifm_counts.csv.gz",
+      "bytes": 5670823,
+      "sha256": "6fdee6c7f0c2c3098f851c761d7fafa4f9a359af200703258f7fda255ddd3e69",
+      "matrix_path": "data/processed/baron/20260916T210631005068Z/human1_counts.npz",
+      "matrix_sha256": "c8c82b1f8e8526a77b6c5d230b1a41ddb082aeb8f180f9b81921029c5c3006e5",
+      "cells_path": "data/processed/baron/20260916T210631005068Z/human1_cells.csv",
+      "cells_sha256": "7cb786e051d2330440196122bdfca58987af99c56895821bcea1b839ad288013",
+      "shape": [
+        1937,
+        20125
+      ],
+      "nonzero_entries": 3726445,
+      "cell_type_counts": {
+        "acinar": 110,
+        "activated_stellate": 51,
+        "alpha": 236,
+        "beta": 872,
+        "delta": 214,
+        "ductal": 120,
+        "endothelial": 130,
+        "epsilon": 13,
+        "gamma": 70,
+        "macrophage": 14,
+        "mast": 8,
+        "quiescent_stellate": 92,
+        "schwann": 5,
+        "t_cell": 2
+      },
+      "median_umi": 5346.0,
+      "characteristics": [
+        "age: 17",
+        "Sex: male",
+        "bmi: 21.5",
+        "type 2 diabetes mellitus: No"
+      ]
+    },
+    {
+      "donor": "human2",
+      "accession": "GSM2230758",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230758/suppl/GSM2230758_human2_umifm_counts.csv.gz",
+      "deposited_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230758/suppl/GSM2230758_human2_umifm_counts.csv.gz",
+      "final_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230758/suppl/GSM2230758_human2_umifm_counts.csv.gz",
+      "retrieved_at_utc": "2026-09-16T21:06:53.634237+00:00",
+      "raw_path": "data/raw/GSE84133/20260916T210631005068Z/GSM2230758_human2_umifm_counts.csv.gz",
+      "bytes": 4960352,
+      "sha256": "376bbea51a35096b56e3e30b36e33b8a43ead9abcf5c5c87b4fcbfd04e76d5d7",
+      "matrix_path": "data/processed/baron/20260916T210631005068Z/human2_counts.npz",
+      "matrix_sha256": "a4970dc602d070c3cd0352e7d2ea8831edf473a21bc5e693c9ec0acd7f13aed4",
+      "cells_path": "data/processed/baron/20260916T210631005068Z/human2_cells.csv",
+      "cells_sha256": "ad2ff6b11cfb390d61eee4700ab608163a26711ab45601d0db3170f1f0940c3b",
+      "shape": [
+        1724,
+        20125
+      ],
+      "nonzero_entries": 3265184,
+      "cell_type_counts": {
+        "acinar": 3,
+        "activated_stellate": 81,
+        "alpha": 676,
+        "beta": 371,
+        "delta": 125,
+        "ductal": 301,
+        "endothelial": 23,
+        "epsilon": 2,
+        "gamma": 86,
+        "macrophage": 17,
+        "mast": 9,
+        "quiescent_stellate": 22,
+        "schwann": 6,
+        "t_cell": 2
+      },
+      "median_umi": 4889.5,
+      "characteristics": [
+        "age: 51",
+        "Sex: female",
+        "bmi: 21.1",
+        "type 2 diabetes mellitus: No"
+      ]
+    },
+    {
+      "donor": "human3",
+      "accession": "GSM2230759",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230759/suppl/GSM2230759_human3_umifm_counts.csv.gz",
+      "deposited_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230759/suppl/GSM2230759_human3_umifm_counts.csv.gz",
+      "final_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230759/suppl/GSM2230759_human3_umifm_counts.csv.gz",
+      "retrieved_at_utc": "2026-09-16T21:07:11.835646+00:00",
+      "raw_path": "data/raw/GSE84133/20260916T210631005068Z/GSM2230759_human3_umifm_counts.csv.gz",
+      "bytes": 9767500,
+      "sha256": "187c77c0914043e2d56253a634b8cad5194ef87a64109e4f824df303ff5c215f",
+      "matrix_path": "data/processed/baron/20260916T210631005068Z/human3_counts.npz",
+      "matrix_sha256": "10cfecaa22ae52d70bd9b7eb2df4771fe8840621c3f4b654b720b09868c80062",
+      "cells_path": "data/processed/baron/20260916T210631005068Z/human3_cells.csv",
+      "cells_sha256": "8d778e41a8624418339144a4c0911f69f45764aff40e32da10bd7a5bf4e93b0a",
+      "shape": [
+        3605,
+        20125
+      ],
+      "nonzero_entries": 6309726,
+      "cell_type_counts": {
+        "acinar": 843,
+        "activated_stellate": 100,
+        "alpha": 1130,
+        "beta": 787,
+        "delta": 161,
+        "ductal": 376,
+        "endothelial": 92,
+        "epsilon": 2,
+        "gamma": 36,
+        "macrophage": 14,
+        "mast": 7,
+        "quiescent_stellate": 54,
+        "schwann": 1,
+        "t_cell": 2
+      },
+      "median_umi": 4742.0,
+      "characteristics": [
+        "age: 38",
+        "Sex: male",
+        "bmi: 27.5",
+        "type 2 diabetes mellitus: No"
+      ]
+    },
+    {
+      "donor": "human4",
+      "accession": "GSM2230760",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230760/suppl/GSM2230760_human4_umifm_counts.csv.gz",
+      "deposited_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230760/suppl/GSM2230760_human4_umifm_counts.csv.gz",
+      "final_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2230nnn/GSM2230760/suppl/GSM2230760_human4_umifm_counts.csv.gz",
+      "retrieved_at_utc": "2026-09-16T21:07:19.651099+00:00",
+      "raw_path": "data/raw/GSE84133/20260916T210631005068Z/GSM2230760_human4_umifm_counts.csv.gz",
+      "bytes": 4253067,
+      "sha256": "fd54cc3d83e213ac473632b2b938f608d48378c48fb1e0d0f7919cf2efa41e86",
+      "matrix_path": "data/processed/baron/20260916T210631005068Z/human4_counts.npz",
+      "matrix_sha256": "11efd8f3d4f3273b00aa75edb77506faae5880c1fa948b28193cf3d12e64bc84",
+      "cells_path": "data/processed/baron/20260916T210631005068Z/human4_cells.csv",
+      "cells_sha256": "125a0e94219bc447548ae3de3c85c15ff3bc3274b94b2effa0cebbbc8b23a582",
+      "shape": [
+        1303,
+        20125
+      ],
+      "nonzero_entries": 2870409,
+      "cell_type_counts": {
+        "acinar": 2,
+        "activated_stellate": 52,
+        "alpha": 284,
+        "beta": 495,
+        "delta": 101,
+        "ductal": 280,
+        "endothelial": 7,
+        "epsilon": 1,
+        "gamma": 63,
+        "macrophage": 10,
+        "mast": 1,
+        "quiescent_stellate": 5,
+        "schwann": 1,
+        "t_cell": 1
+      },
+      "median_umi": 6017.0,
+      "characteristics": [
+        "age: 59",
+        "Sex: female",
+        "bmi: 29.9",
+        "type 2 diabetes mellitus: Yes"
+      ]
+    }
+  ],
+  "limitations": [
+    "Original author cell labels retained; annotation uncertainty not validated.",
+    "Four source donors, one recorded type 2 diabetes; no causal disease comparison.",
+    "Processed count tables, not new wet-lab measurements or new biological samples.",
+    "Public deposited inputs; cite original creators; publication-specific terms still to review."
+  ]
+}
