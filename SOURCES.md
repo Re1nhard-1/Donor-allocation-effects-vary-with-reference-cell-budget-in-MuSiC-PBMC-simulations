@@ -6,3 +6,7 @@
 - **MuSiC:** Wang et al., *Nature Communications* (2019), [10.1038/s41467-018-08023-x](https://doi.org/10.1038/s41467-018-08023-x). Official MuSiC 1.0.0 at [commit f21fe67f5670d5e9fca0ad7550abaae3423eb59c](https://github.com/xuranw/MuSiC/tree/f21fe67f5670d5e9fca0ad7550abaae3423eb59c) is GPL (>=3), obtained separately. Installed third-party libraries and complete source H5AD files are not redistributed.
 
 - **Measured bulk and flow cytometry:** Monaco et al., *Cell Reports* (2019), [10.1016/j.celrep.2019.01.041](https://doi.org/10.1016/j.celrep.2019.01.041). RNA-seq: GSE107011/SRP125125; independent flow truth: Supplementary Table S6, worksheet GSE107019 (Our S13 cohort). recount3 supplies gene coverage counts; sources and transformations are in `data/processed/real_bulk/sources.json`. The post-hoc quantification pilot uses SRR6298350 (participant 453W), Ensembl GRCh37 release 87 and the retained 10x hg19 gene biotypes. Download URLs and preparation commands are in `analysis/prepare_salmon_pilot.py` and `analysis/run_salmon_pilot.sh`. Genome, full annotation and FASTQ downloads are obtained from their original providers.
+
+## Pancreas extension
+
+GSE84133; Baron et al., Cell Systems (2016), https://doi.org/10.1016/j.cels.2016.08.011. Original human1–human4 annotated counts were used. The data archive includes the input manifest with original GEO URLs and checksums, processed inputs, reference selections and target truths.

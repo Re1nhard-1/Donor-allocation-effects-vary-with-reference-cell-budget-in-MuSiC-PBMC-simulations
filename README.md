@@ -1,48 +1,32 @@
-# Donor allocation and reference-cell budget in MuSiC
+# Donor-allocation effects vary with reference-cell budget in MuSiC PBMC simulations
 
-Code and data accompanying **Donor-allocation effects vary with reference-cell budget in MuSiC PBMC simulations** by Yunhao Jiang.
+Code and results accompanying the manuscript by Yunhao Jiang.
 
-The controlled simulations vary cells contributed by three reference donors while holding their identities and the total cells per type fixed. Larger budgets reduce the average allocation penalty, while effects in individual configurations remain. The measured-bulk assessment did not establish transfer of this trend.
+## Files
 
-## Contents
+- `analysis/`: data preparation, fitting, summary and plotting scripts used in the study.
+- `results/`: selected full-precision summaries, figure source data and displayed manuscript tables.
+- `environment/`: recorded dependencies and MuSiC source version.
+- `reproduction_integrated/`: parameterized code for the five initial PBMC simulation stages.
 
-- `analysis/`: preparation, fitting, summarization and plotting scripts.
-- `results/`: figure source data and selected result tables; `manuscript_tables/` contains the displayed tables, including rounding and explanatory cells.
-- `reproduction_integrated/`: parameterized reconstruction and fitting code for the five initial simulation stages.
-- `environment/`: recorded Python, R and optional Salmon dependencies.
+Processed inputs, simulated targets and truths, reference selections and saved predictions are in [Zenodo v1.2.0](https://doi.org/10.5281/zenodo.23012998). Download `data.zip` and extract it into this repository. Public source accessions and software citations are in [SOURCES.md](SOURCES.md); original GEO reads and installed software are not redistributed.
 
-The complete release is archived at [Zenodo](https://doi.org/10.5281/zenodo.22902701):
+## Analyses
 
-- **code_results.zip**: this code, all retained simulation and measured-bulk result tables, design files and figure PDFs.
-- **data.zip**: processed count matrices, target truths, reference selections, saved predictions and diagnostic inputs.
+| Analysis | Entry points | Saved results |
+|---|---|---|
+| Initial PBMC simulations | `reproduction_integrated/code/run.py`, `summarize.py` | `results/music_*_review/` in the data archive |
+| Additional reference draws | `analysis/run_music_mc_extension_v1.R`, `review_music_mc_extension_v1.py` | `results/music_mc_extension_review/` |
+| Component interventions | `analysis/run_music_components.R`, `review_music_components.py` | `results/music_components/` |
+| Exploratory pancreas extension | `analysis/run_music_pancreas.R`, `review_music_pancreas.py` | `results/music_pancreas/` |
+| Measured bulk and input diagnostics | `analysis/run_real_bulk*.R`, `run_salmon_pilot_music.R` | `results/real_bulk*` |
 
-Extract both ZIPs into the same empty directory, preserving their relative paths. GitHub provides a smaller browsing copy. Original public datasets and exact versions are listed in [SOURCES.md](SOURCES.md).
+See [run_commands.md](run_commands.md) for arguments and plotting commands. The repository retains necessary source dependencies; older exploratory work and historical releases remain available in v1.1.0.
 
-## Figures and tables
+The pancreas primary comparison was not reproduced, and measured-bulk assessment did not validate transfer of the PBMC trend. Their saved results are included. Component interventions provide computational attribution, not a biological causal mechanism. Monte Carlo blocks quantify conditional sampling variation, not population uncertainty.
 
-Install `environment/requirements-deconvolution.lock.txt`. From the extracted directory:
+## Versions and licence
 
-```sh
-python analysis/plot_manuscript_figures.py
-python analysis/plot_profiles_from_source.py
-python analysis/plot_real_bulk.py
-python analysis/summarize_salmon_pilot.py --plot-only
-```
+v1.2.0 adds the pancreas and component analyses and updates displayed tables and figure sources without rerunning the scientific analyses. The existing [v1.1.0 release](https://github.com/Re1nhard-1/Donor-allocation-effects-vary-with-reference-cell-budget-in-MuSiC-PBMC-simulations/releases/tag/v1.1.0) and [data DOI](https://doi.org/10.5281/zenodo.22902701) remain available for earlier manuscript versions. The preprint is [Research Square v1](https://doi.org/10.21203/rs.3.rs-11156252/v1).
 
-These commands read saved results for Figures 1–2 and S1–S6; they do not refit MuSiC. Output goes to `figures/` beside the extracted directory. The supplied PDFs are the manuscript figures. `results/manuscript_tables/` gives Tables 1 and S1–S18. Full-precision simulation summaries remain in the named `results/music_*_review/` directories. Measured-bulk results are in `results/real_bulk/`, `real_bulk_scale/` and `real_bulk_salmon/`.
-
-## Reproduction
-
-The five initial stages are endpoints, intermediate allocations, thinning, external budgets and alternative grouping. Their saved-prediction summaries can be recalculated without fitting:
-
-```sh
-python reproduction_integrated/code/summarize.py --endpoints work/predictions/endpoints --gradient work/predictions/gradient --thinning work/predictions/thinning --external work/predictions/external --alternative work/predictions/alternative --output recomputed
-```
-
-For full fitting, `reproduction_integrated/code/run.py --help` accepts explicit input, Rscript, R-library and official MuSiC source paths. Use the pinned MuSiC commit in SOURCES.md and the recorded R dependencies. Additional-draw, diagnostic and measured-bulk source scripts are in `analysis/`; their protocols specify parameters and inputs. Original source scripts retain their study directory conventions. The R scripts expect the project working directory and `.tools/R-library`; the integrated runner accepts an explicit library path. Salmon quantification uses the separate Linux environment and downloads in `environment/salmon/` and `analysis/run_salmon_pilot.sh`.
-
-Saved results were reused for this release. The previously tested five-stage reconstruction and summary route does not establish a new-machine or end-to-end reproduction of every later diagnostic. Raw FASTQs, genomes, installed software, private files, work logs and backups are not included. Earlier normalized-cell exploratory findings are retained in Supplementary Table S3; they are separate from the raw-count MuSiC simulations.
-
-## License and citation
-
-Project code is GPL-3.0-or-later; project results, figures and documentation are CC BY 4.0. Upstream data retain their original terms. See LICENSE.md, SOURCES.md and CITATION.cff.
+Project code is GPL-3.0-or-later; project results and documentation are CC BY 4.0. Third-party material retains its original terms; see LICENSE.md and SOURCES.md.
